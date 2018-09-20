@@ -18,6 +18,21 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="p1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="p2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="p3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="p4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="p5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
