@@ -158,6 +158,7 @@
     <ClInclude Include="p5.h" />
     <ClInclude Include="p6.h" />
     <ClInclude Include="p7.h" />
+    <ClInclude Include="p9.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>
