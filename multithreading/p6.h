@@ -49,6 +49,18 @@ namespace p6
         return result;
     }
 
+    template<typename A>
+    void addByCopy(A& src, A& dst)
+    {
+        std::copy(src.begin(), src.end(), std::back_inserter(dst));
+    }
+
+    template<typename A>
+    void addByMove(A& src, A& dst)
+    {
+        std::move(src.begin(), src.end(), std::back_inserter(dst));
+    }
+
     void executeListDir()
     {
         std::string root = "c:\\users\\Public";
@@ -76,8 +88,8 @@ namespace p6
                     auto result = future.get();
                     futures.pop_back();
 
-                    std::copy(result.files.begin(), result.files.end(), std::back_inserter(files));
-                    std::copy(result.dirs.begin(), result.dirs.end(), std::back_inserter(dirsToDo));
+                    addByMove(result.files, files);
+                    addByMove(result.dirs, dirsToDo);
                 }
             }
             catch (std::system_error & e)
@@ -93,8 +105,5 @@ namespace p6
                 std::cout << "Unknown error..." << std::endl;
             }
         }
-
-        for (auto& filename : files)
-            std::cout << filename << std::endl;
     }
 }
